@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1rem;
+  font-family: "Big Shoulders Display", cursive;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  background-color: #000;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a {
+  border: 1px solid green;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  color: red;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.box-container {
+  width: 30%;
+  display: grid;
+  gap: 0.4rem;
+  grid-template-areas:
+    "a a b"
+    "c d d"
+    "c e e";
+}
+
+.box-container > div {
+  padding: 20px;
+}
+
+.box-1 {
+  grid-area: a;
+  background: #e63811;
+  height: 130px;
+}
+
+.box-2 {
+  grid-area: b;
+  background-color: #cf8906;
+}
+
+.box-3 {
+  grid-area: c;
+  background-color: green;
+}
+
+.box-4 {
+  grid-area: d;
+  background-color: #1e90ff;
+  height: 50px;
+}
+.box-5 {
+  grid-area: e;
+  background-color: #1e90ff;
+  height: 60px;
+}
+
+/* Media query */
+
+@media screen and (max-width: 375px) {
+  .box-container {
+    width: 80%;
+  }
+}
